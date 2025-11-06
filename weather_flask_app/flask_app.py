@@ -24,8 +24,8 @@ def home():
                 'humidity':weather_data['main']['humidity'],
                 'icon':icon_url,
             }
-        else:
-            weather_data='CITY NOT FOUND'
+    else:
+        weather_data='CITY NOT FOUND'
     return render_template('index.html',weather=weather_data)
 
 if __name__=='__main__':
