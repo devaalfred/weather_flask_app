@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" >
+    <title>WEATHER APP</title>
+    <link rel="stylesheet" href="{{ url_for ('static',filename='style.css') }}" >
+</head>   <!--href tells where to find the file you want to load,curly braces tells to 1st read by flask,url_for says that create a link for the file path -->
+
+<body>
+    <div class="container">
+        <h1>⛅CHECK WEATHER NOW!</h1>
+        <img src="https://www.pikpng.com/pngl/b/170-1709571_cartoon-clip-art-cartoon-white-clouds-png-transparent.png" class="cloud" alt="cloud">
+        <form method="POST">
+             <input type="text" name="city" placeholder="Enter city name" required>
+            <button type="submit">GET WEATHER</button>
+        </form>
+        {%if weather%} <!-- will run only if weather data is present-->
+        <div class="result">
+            <h2>{{weather.city}}</h2>
+            <p>Temperature:{{ weather.temp }}°C</p>
+            <p>Condition:{{ weather.description}}
+                <img src="{{ weather.icon }}" alt="weather icon" class="weather-icon">
+            </p>
+            <p>humidity:{{weather.humidity}}%</p>
+        </div>
+        {%endif%}
+
+    </div>
+</body>
+</html>
