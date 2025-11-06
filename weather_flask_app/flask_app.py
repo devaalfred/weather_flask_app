@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import requests
+import os
 
 app = Flask(__name__)
 
@@ -8,7 +9,7 @@ def home():
     weather_data=None
     if request.method == 'POST':
         city=request.form['city']
-        api_key='8a6c9a617f53a03d040199d25ef2d2be'
+        api_key=os.getenv("OPEN_WEATHER_API_KEY","8a6c9a617f53a03d040199d25ef2d2be")
         url=f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric'
         response=requests.get(url)
 
