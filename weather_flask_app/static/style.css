@@ -82,7 +82,7 @@ form{
     }
 }
 .result{
-    margin-left:30px;
+    margin-left:20px;
     text-transform:capitalize;
     color:white;
     font-family: copperplate;
@@ -105,6 +105,7 @@ form{
     transform:rotate(15deg);
     filter: drop-shadow(4px 6px 8px rgba(0,0,0,0.4))
 }
+
 
 
 
