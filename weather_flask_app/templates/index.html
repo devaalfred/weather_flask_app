@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0" >
     <title>WEATHER APP</title>
-    <link rel="stylesheet" href="{{ url_for ('static',filename='style.css') }}" >
+    <link rel="stylesheet" href="{{ url_for ('static',filename='style2.css') }}" >
 </head>   <!--href tells where to find the file you want to load,curly braces tells to 1st read by flask,url_for says that create a link for the file path -->
 
 <body>
@@ -15,6 +15,7 @@
              <input type="text" name="city" placeholder="Enter city name" required>
             <button type="submit">GET WEATHER</button>
         </form>
+
         {%if weather%} <!-- will run only if weather data is present-->
         <div class="result">
             <h2>{{weather.city}}</h2>
@@ -23,6 +24,17 @@
                 <img src="{{ weather.icon }}" alt="weather icon" class="weather-icon">
             </p>
             <p>humidity:{{weather.humidity}}%</p>
+        </div>
+
+        {% elif not submitted %}
+        <div class="result">
+            <h3 class="one">Please enter a city to get</h3>
+            <h3 class="one">Weather data</h3>
+        </div>
+
+        {%elif error%}
+        <div class="result">
+            <h3 class="one"> OOPS! CITY NOT FOUND</h3>
         </div>
         {%endif%}
 
