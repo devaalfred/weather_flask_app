@@ -7,7 +7,11 @@ app = Flask(__name__)
 @app.route('/',methods=['GET','POST'])
 def home():
     weather_data=None
+    error= False
+    submitted=False
+
     if request.method == 'POST':
+        submitted = True
         city=request.form['city']
         api_key=os.getenv("OPEN_WEATHER_API_KEY","8a6c9a617f53a03d040199d25ef2d2be")
         url=f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric'
@@ -24,9 +28,12 @@ def home():
                 'humidity':weather_data['main']['humidity'],
                 'icon':icon_url,
             }
-    else:
-        weather_data='CITY NOT FOUND'
-    return render_template('index.html',weather=weather_data)
+        elif request.method == 'GET':
+            submitted = False
+        else:
+            error = True
+
+    return render_template('index2.html',weather=weather_data, error=error, submitted=submitted)
 
 if __name__=='__main__':
     app.run(debug=True)
