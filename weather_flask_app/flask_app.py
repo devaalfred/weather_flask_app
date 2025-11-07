@@ -32,8 +32,7 @@ def home():
             submitted = False
         else:
             error = True
-
-    return render_template('index2.html',weather=weather_data, error=error, submitted=submitted)
+        return render_template('index2.html',weather=weather_data, error=error, submitted=submitted)
 
 if __name__=='__main__':
     app.run(debug=True)
