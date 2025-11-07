@@ -82,12 +82,16 @@ form{
     }
 }
 .result{
-    margin-left:20px;
+    margin-left:10px;
     text-transform:capitalize;
     color:white;
     font-family: copperplate;
     p{
         font-size:20px;
+    }
+    .one{
+        text-align:center;
+        margin-right:10px;
     }
 }
 
@@ -105,7 +109,6 @@ form{
     transform:rotate(15deg);
     filter: drop-shadow(4px 6px 8px rgba(0,0,0,0.4))
 }
-
 
 
 
