@@ -39,13 +39,15 @@ git clone https://github.com/devaalfred/weather_flask_app.git
 cd weather-app
 
 2. Install dependencies
+   
 pip install -r requirements.txt
 
 3. Add your OpenWeather API key
-Open app.py
-Replace "YOUR_API_KEY" with your actual API key from OpenWeather
+   
+Open app.py Replace "YOUR_API_KEY" with your actual API key from OpenWeather
 
 4. Run the app
+   
 python app.py
 
 5. View in browser
