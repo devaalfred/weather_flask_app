@@ -21,10 +21,10 @@ It shows the current temperature, humidity, and weather condition of any city us
 
 Category	Tools Used
 
-Frontend	HTML, CSS
-Backend	Flask (Python)
-API	OpenWeather API
-Libraries	requests, json
+Frontend-HTML, CSS
+Backend-Flask (Python)
+API-OpenWeather API
+Libraries-requests, json
 
 ---
 
