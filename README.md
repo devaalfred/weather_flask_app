@@ -22,8 +22,11 @@ It shows the current temperature, humidity, and weather condition of any city us
 Category	Tools Used
 
 Frontend-HTML, CSS|
+
 Backend-Flask (Python)|
+
 API-OpenWeather API|
+
 Libraries-requests, json|
 
 ---
@@ -70,6 +73,7 @@ Go to 👉 https://weather-flask-app-adbp.onrender.com
 Deva Alfred
 
 > 💻 Python | Flask | Streamlit | Tkinter | HTML | CSS | SQL | Pandas | Matplotlib
+
 🌱 Learning every day and building useful apps
 
 ---
